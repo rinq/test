@@ -6,4 +6,5 @@ services:
 install:
 - docker swarm init
 - nvm install node
+- curl -o- -L https://yarnpkg.com/install.sh | bash
 script: make run -j 8

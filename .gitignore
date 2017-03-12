@@ -1,2 +1,4 @@
 /artifacts
 /vendor
+/websocket/node_modules
+/websocket/yarn.lock

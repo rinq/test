@@ -4,8 +4,12 @@ DOCKER_REPO ?= rinq/test-server
 SHELL := /bin/bash
 -include artifacts/make/go.mk
 
-.PHONY:
-run: docker
+.PHONY: run
+run: artifacts/build/debug/$(GOOS)/$(GOARCH)/rinq-test-server
+	"$<"
+
+.PHONY: docker-services
+docker-services: docker
 	-docker network create --driver overlay rinq-test
 	-docker service rm $$(docker service ls -q --filter name=rinq-test)
 
