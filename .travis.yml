@@ -1,0 +1,7 @@
+language: go
+go:
+- '1.8'
+services:
+- docker
+script: make run -j 8
+after_script: bash <(curl -s https://codecov.io/bash)

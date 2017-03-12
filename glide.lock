@@ -1,0 +1,36 @@
+hash: 499b31d287f40955f182526a9691a8dce3d4a1367f6c659d8e2ba56532e15a20
+updated: 2017-03-12T19:00:23.851530109+10:00
+imports:
+- name: github.com/hashicorp/go-version
+  version: 03c5bf6be031b6dd45afec16b1cf94fc8938bc77
+- name: github.com/onsi/ginkgo
+  version: ab07225d112dc7a93c289ac5b2e12735c2c46035
+- name: github.com/onsi/gomega
+  version: 1de7ab2df9105aa5c15c4d7e14a8a514e3cb8d4b
+- name: github.com/rinq/rinq-go
+  version: fe8957f99315b7d61b221d70ebc98250283ebc3f
+  subpackages:
+  - src/rinq
+  - src/rinq/amqp
+  - src/rinq/amqp/internal/amqputil
+  - src/rinq/amqp/internal/commandamqp
+  - src/rinq/amqp/internal/notifyamqp
+  - src/rinq/ident
+  - src/rinq/internal/attrmeta
+  - src/rinq/internal/bufferpool
+  - src/rinq/internal/command
+  - src/rinq/internal/localsession
+  - src/rinq/internal/notify
+  - src/rinq/internal/reflectutil
+  - src/rinq/internal/remotesession
+  - src/rinq/internal/revision
+  - src/rinq/internal/service
+  - src/rinq/internal/syncutil
+  - src/rinq/trace
+- name: github.com/streadway/amqp
+  version: ce1c69d94c3efdb1f287015f851b17db8fa205b1
+- name: github.com/ugorji/go
+  version: c88ee250d0221a57af388746f5cf03768c21d6e2
+  subpackages:
+  - codec
+testImports: []
