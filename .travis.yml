@@ -3,5 +3,7 @@ go:
 - '1.8'
 services:
 - docker
-before_script: docker swarm init
+install:
+- docker swarm init
+- nvm install node
 script: make run -j 8
