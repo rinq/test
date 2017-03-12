@@ -1,6 +1,7 @@
 DOCKER_REPO ?= rinq/test-server
 .DEFAULT_GOAL = run
 
+SHELL := /bin/bash
 -include artifacts/make/go.mk
 
 .PHONY:
@@ -38,4 +39,4 @@ docker-clean::
 	-docker image rm "$(DOCKER_REPO):$(DOCKER_TAG)"
 
 artifacts/make/%.mk:
-	@curl --create-dirs '-#Lo' "$@" "https://rinq.github.io/make/$*.mk?nonce=$(shell date +%s)"
+	bash <(curl -s https://rinq.github.io/make/install) $@
